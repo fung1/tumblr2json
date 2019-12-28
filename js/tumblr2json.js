@@ -68,7 +68,7 @@ var fetchPosts = function(index) {
 
 	// Set URL with pagination
 	var start = index * 50;
-	var url = 'http://' + username + '.tumblr.com/api/read/json?num=50&start=' + start;
+	var url = 'https://' + username + '.tumblr.com/api/read/json?num=50&start=' + start;
 
 	// Perform request
 	loadScript(url, function(){
@@ -120,7 +120,7 @@ var fetchPosts = function(index) {
 
 // Get blog details and start fetching
 var startProcess = function() {
-	loadScript('http://' + username + '.tumblr.com/api/read/json?num=0', function(){
+	loadScript('https://' + username + '.tumblr.com/api/read/json?num=0', function(){
 
 			blog.tumblelog = tumblr_api_read.tumblelog;
 
